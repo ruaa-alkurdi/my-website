@@ -208,7 +208,6 @@
 
   <div id="homePage" class="page hidden p-4">
     <div class="card p-4 mb-6">
-      <img src="images (1).jpeg" alt="إعلان" class="rounded-lg mb-4" />
       <button id="newReportBtn" onclick="showPage('reportPage')" class="w-full bg-primary text-light p-3 rounded-lg hover:opacity-75">الإبلاغ عن مشكلة جديدة</button>
     </div>
     <div class="card p-4">
@@ -236,4 +235,21 @@
         <textarea id="description" name="description" class="w-full p-3 border rounded-lg shadow-md focus:outline-none" rows="4" required></textarea>
       </div>
       <div class="mb-4">
-        <button type="button" id="addImageBtn" onclick="openImageSelector()" class="w-full bg-secondary
+        <button type="button" id="addImageBtn" onclick="openImageSelector()" class="w-full bg-secondary text-light p-3 rounded-lg hover:opacity-75">إضافة صورة</button>
+        <input type="file" id="imageInput" accept="image/*" class="hidden" onchange="handleImageUpload(event)" />
+        <img id="imagePreview" src="#" alt="معاينة الصورة" class="hidden mt-4 rounded-lg max-h-60 mx-auto" />
+      </div>
+      <button id="sendReportBtn" onclick="submitReport()" class="w-full bg-primary text-light p-3 rounded-lg hover:opacity-75">إرسال البلاغ</button>
+    </div>
+  </div>
+
+  <div id="notificationsPage" class="page hidden p-4">
+    <div class="card p-4">
+      <h2 id="notificationsTitle" class="text-xl font-semibold mb-4">الإشعارات</h2>
+      <p>لا توجد إشعارات جديدة.</p>
+      <button id="closeBtn" onclick="closeNotifications()" class="mt-4 bg-primary text-light p-3 rounded-lg hover:opacity-75">إغلاق</button>
+    </div>
+  </div>
+
+</body>
+</html>
